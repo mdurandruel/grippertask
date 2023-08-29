@@ -1,0 +1,9 @@
+Target hit description
+
+The output of the gripper corresponds to the center of the ball. Whenever this value is anywhere between the vertices of the rectangles, this counts as a hit.
+The ball does not jitter whithin the bars because it is drawn outside the loop that counts the time on target, but the oscillating values are stored appropriately.
+
+%Overlapping area
+The code saves the elapsed time at the instant when each target is met (tt_bar). The time range to be considered for the overlap between the ball and the bar goes from 
+tt_bar - time_on_target to tt_bar. The average of the force values within this time range is then used to calculate the position of a single ball, whose area is compared
+to that of the bar. 
